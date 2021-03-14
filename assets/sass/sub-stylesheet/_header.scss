@@ -1,0 +1,158 @@
+//*======== header css start =======*//
+header {
+    .header-top {
+        padding: 15px 0;
+        position: relative;
+        background: #eef1f3;
+        .top-item {
+            @extend %flex;
+            align-items: center;
+            justify-content: space-between;
+            .header-logo {
+                img {
+
+                }
+            }
+            .header-point {
+                button {
+                    background: none;
+                    &:focus {
+                        outline: none;
+                    }
+                   
+                }
+                &:hover {
+                    .dropdown-menu {
+                        opacity: 1;
+                        transform: translateY(0);
+                        visibility: visible;
+                    }
+                }
+                .dropdown-menu {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    background: #eef1f3;
+                    transition: all 0.3s ease-in-out;
+                    ul.drop-list {
+                        margin: 0;
+                        padding: 10px;
+                        list-style: none;
+                        li {
+                            padding-bottom: 5px;
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+                            span.title {
+                                color: #000;
+                                display: block;
+                                padding-bottom: 5px;
+                                border-bottom: 1px solid #333;
+                            }
+                            a {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .top-menu {
+                ul.list-menu {
+                    list-style: none;
+                    @extend %flex;
+                    padding: 0;
+                    margin: 0;
+                    align-items: center;
+                    li {
+                        margin: 0 10px;
+                        a {
+                            color: #000;
+                            padding: 2.5px 10px;
+                            border-radius: 4px;
+                            position: relative;
+                            border: 1px solid $theme-color;
+                            transition: all 0.3s ease-in-out;
+                            &::after {
+                                @extend %absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                width: 100%;
+                                transform: scale(0);
+                                background: $theme-color;
+                                transition: all 0.3s ease-in-out;
+                            }
+                           & span {
+                                color: #000;
+                                z-index: 1;
+                                position: relative;
+                            }
+                            &:hover {
+                                &::after {
+                                    transform: scale(1);
+                                }
+                                & span {
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        padding: 15px 0;
+        .bottom-item {
+            ul.menu-list {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                @extend %flex;
+                justify-content: flex-start;
+                align-items: center;
+                li {
+                    a {
+                        color: #000;
+                        padding: 5px 10px;
+                    }
+                    &:hover {
+                        .dropdown-menu {
+                            opacity: 1;
+                            transform: translateY(0);
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(30px);
+    background: #eef1f3;
+    transition: all 0.3s ease-in-out;
+    ul.drop-list {
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        li {
+            padding-bottom: 5px;
+            &:last-child {
+                padding-bottom: 0;
+            }
+            span.title {
+                color: #000;
+                display: block;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #333;
+            }
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+//*======== header css ends  =======*//
