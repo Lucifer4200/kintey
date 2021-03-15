@@ -1,0 +1,397 @@
+//*===== req quotation css start ====*//
+.request-qa {
+    .section-wrapper {
+        padding-top: 30px;
+        .quotation-slider {
+            .req-container {
+                position: relative;
+                overflow: hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .req-thumb {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-next, .swiper-button-prev {  
+                    width: calc(var(--swiper-navigation-size)/ 30 * 30);
+                    background-repeat: repeat-x;
+                    background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+                    &::after, &::before {
+                        font-size: 16px;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        .req-form {
+            @extend %flex;
+            padding: 22px;
+            background: $section-bg;
+            align-items: flex-start;
+            .form-thumb {
+                width: 20%;
+                @include breakpoint (mobile) {
+                    width: 40%;
+                }
+            }
+            .form-content {
+                width: calc(100% - 20%);
+                @include breakpoint (mobile) {
+                    width: calc(100% - 40%);
+                }
+                .form-header {
+                    h4 {
+                        margin: 0;
+                    }
+                }
+                form {
+                    .input-group {
+                        width: 100%;
+                    }
+                    .input-btn {
+                        button {
+                            width: 100%;
+                            border-radius: 5px;
+                            @include breakpoint (max-mobile) {
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== req quotation css ends  ====*//
+
+
+//*===== weekly deals css start  ====*//
+.weekly-deals, .buyer-zone {
+    .section-wrapper {
+        .deals-banner {
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            background-image: url(../../assets/images/weekly/offer.jpg);
+            .discount-wrap {
+                padding-bottom: 20px;
+                text-align: center;
+                @include breakpoint (xl) {
+                    padding-bottom: 30px;
+                }
+                h3 {
+                    margin: 0;
+                    color: $white-color;
+                    span {
+                        font-size: 18px;
+                    }
+                    @include breakpoint (sm) {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .discont-end {
+                text-align: center;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    @extend %flex;
+                    justify-content: center;
+                    li {
+                        margin: 5px;
+                        &:nth-child(1), &:nth-child(2) {
+                            a {
+                                color: $theme-color;
+                                background: #dff0d8;
+                            }
+                        }
+                        &:nth-child(4) {
+                            a {
+                                color: $theme-color;
+                                background: $section-bg;
+                            }
+                        }
+                        &:nth-child(5) {
+                            a {
+                                color: $white-color;
+                                background: $theme-color;
+                            }
+                        }
+                        a {
+                            color: #fff;
+                            padding: 2.5px 8px;
+                            text-decoration: none;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            .deals-btn {
+                text-align: center;
+                margin-top: 20px;
+                @include breakpoint (xl) {
+                    margin-top: 30px;
+                }
+                .btn {
+                    background: $white-color;
+                    span {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .weekly-slider {
+            overflow: hidden;
+        }
+    }
+    &.buyer-zone {
+        .section-wrapper {
+            .ecommerce-fast-bg {
+                min-height: 250px;
+                background-image: url(../../assets/images/products/bg-2.webp);
+                span {
+                    font-size: 16px;
+                    color: $white-color;
+                    @include breakpoint (sm) {
+                        font-size: 20px;
+                    }
+                }
+                h3 {
+                    margin: 0;
+                    color: $white-color;
+                    font-size: 25px;
+                    padding-top: 25px;
+                }
+            }
+            .buyer-slider {
+                overflow: hidden;
+            }
+        }
+    }
+}
+//*===== weekly deals css ends  ====*//
+
+//*===== join us today css start ====*//
+.join-marketplace {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../assets/images/newsletter/01.jpg);
+    .overlay {
+        @extend %absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: .8;
+        background: linear-gradient(to right, $theme-color, $primary-color);
+    }
+    .join-content {
+        z-index: 9;
+        text-align: center;
+        position: relative;
+        h3 {
+            margin: 0;
+            font-weight: 500;
+            color: $white-color;
+            padding-bottom: 12px;
+        }
+        p {
+            margin: 0;
+            color: $white-color;
+        }
+        button.btn {
+            margin-top: 35px;
+            background: $white-color;
+            span {
+                color: $theme-color;
+            }
+        }
+    }
+}
+//*===== join us today css ends  ====*//
+
+//*===== brand slider css start =====*//
+.brand-area {
+    .section-wrapper {
+        padding-top: 35px;
+        .brand-slider {
+            overflow: hidden;
+            .swiper-wrapper {
+                .swiper-slide {
+                    .brand-thumb {
+                        .thumb-inner {
+                            width: 150px;
+                            margin: 0 auto;
+                            text-align: center;
+                            a {
+                                &.brand-logo {
+                                    width: 100%;
+                                    height: 60px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    &:hover {
+                                        span {
+                                            &.before-image, &.after-image {
+                                                img {
+                                                    -webkit-filter: grayscale(0%);
+                                                    filter: grayscale(0%);
+                                                }
+                                            }
+                                            &.before-image {
+                                                top: -50%;
+                                            }
+                                            &.after-image {
+                                                top: 50%;
+                                            }
+                                        }
+                                    }
+                                    span {
+                                        display: inline-block;
+                                        &.before-image, &.after-image {
+                                            left: 50%;
+                                            width: 85%;
+                                            position: absolute;
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                            img {
+                                                -webkit-filter: grayscale(50%);
+                                                filter: grayscale(50%);
+                                            }
+                                        }
+                                        &.before-image {
+                                            top: 50%;
+                                            -webkit-transform: translate(-50%, -50%);
+                                            -ms-transform: translate(-50%, -50%);
+                                            transform: translate(-50%, -50%);
+                                        }
+                                        &.after-image {
+                                            top: 150%;
+                                            -webkit-transform: translate(-50%, -50%);
+                                            -ms-transform: translate(-50%, -50%);
+                                            transform: translate(-50%, -50%);
+                                        }
+                                    }
+                                }
+                                .brand-text {
+                                    span {
+                                        color: $theme-color;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== brand slider css start =====*//
+
+//*==== Footer area css start =====*//
+footer {
+    padding: 20px 0;
+    background: #262b30;
+    .contact-list, .policy, .quick-links, .acount {
+        h4 {
+            font-size: 16px;
+            color: $white-color;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                padding-bottom: 5px;
+                list-style: none;
+                color: $white-color;
+            }
+            a {
+                font-size: 14px;
+                color: $white-color;
+                position: relative;
+                text-decoration: none;
+                &:hover {
+                    color: $theme-color;
+                    transform: translateX(12px);
+                    &::before {
+                        left: -12px;
+                        transform: scale(1);
+                    }
+                }
+                &::before {
+                    @extend %absolute;
+                    top: 50%;
+                    left: -15px;
+                    height: 3px;
+                    width: 10px;
+                    transform: translateY(-50%)scale(0);
+                    background: $theme-color;
+                    @include transition ($transition);
+                }
+            }
+        }
+    }
+    .contact-list {
+        ul li {
+            padding-bottom: 10px;
+            span {
+                font-size: 12px;
+                svg {
+                    margin-right: 5px;
+                    @include breakpoint (xl) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .subscribe {
+        h4 {
+            font-size: 16px;
+            color: $white-color
+        }
+        p {
+            font-size: 12px;
+            color: $white-color;
+            max-width: 200px;
+            margin-left: 0;
+        }
+        form {
+            display: flex;
+            width: 80%;
+            input {
+                color: $theme-color;
+                border-radius: 20px 0 0 20px;  
+            }
+            button.button {
+                width: 30%;
+                border-radius: 0 20px 20px 0;
+                background: $theme-color;
+            }
+        }
+        ul.socil-media {
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+            @extend %flex;
+            li {
+                list-style: none;
+                padding-right: 10px;
+                &:last-child {
+                    padding-right: 0;
+                }
+                span {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+//*==== Footer area css start =====*//

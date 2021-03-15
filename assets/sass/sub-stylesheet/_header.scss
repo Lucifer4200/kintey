@@ -149,6 +149,7 @@ header {
         opacity: 0;
         visibility: hidden;
         transition: all ease 0.3s;
+        z-index: 111;
         box-shadow: 0 0 10px rgba(0, 0, 0, .18);
     }
     ul.drop-list {

@@ -212,14 +212,276 @@ button.btn {
 
 //*==== section header ====*//
 .section-header {
-    text-align: center;
+    @extend %flex;
+    align-items: baseline;
+    position: relative;
+    &::after {
+        @extend %absolute;
+        top: 50%;
+        right: 0;
+        left: auto;
+        width: 100%;
+        height: 7px;
+        border-radius: 10px;
+        transform: translateY(-50%);
+        background: #dcdee3;
+    }
     h3 {
         margin: 0;
         color: $text-color;
         text-transform: uppercase;
+        position: relative;
+        z-index: 9;
+        font-size: 20px;
+        background: $white-color;
+        @include breakpoint (max-lg) {
+            padding-right: 15px;
+        }
+        @include breakpoint (sm) {
+            font-size: 25px;
+        }
+    }
+    span {     
+        z-index: 9;
+        display: none;
+        padding: 0 40px;
+        position: relative;
+        background: $white-color;
+        @include breakpoint (lg) {
+            display: block;
+        }
+    }
+    &.style-one {
+        &::after {
+            height: 2px;
+            top: auto;
+            bottom: 5px;
+            transform: translateY(100%);
+        }
     }
 }
 //*==== section header ====*//
+
+
+//*==== section padding ====*//
+.padding-tb {
+    padding: 60px 0;
+    position: relative;
+}
+//*==== section padding ====*//
+
+/*==== common slider arrow css start =====*/
+.arrow {
+    .next, .prev {
+       position: absolute;
+       top: -12px;
+       z-index: 9;
+       text-align: center;
+       cursor: pointer;
+       @include breakpoint (sm) {
+           top: -8px;
+       }
+       &:hover {
+           span {
+               background: $theme-color;
+               svg {
+                   path {
+                       fill: $white-color;
+                   }
+               }
+           }
+       }
+       &.swiper-button-disabled {
+           cursor: no-drop;
+           span {
+               background: #cc1010;
+               svg {
+                   path {
+                       fill: #333;
+                   }
+               }
+           }
+       }
+       span {
+           height: 32px;
+           width: 32px;
+           line-height: 32px;
+           padding: 0;
+           background: #e1e1e1;
+           display: inline-block;
+           @include transition ($transition);
+       }
+   }
+   .next {
+       right: 0;
+   }
+   .prev {
+       right: 40px;
+   }
+}
+/*==== common slider arrow css ends =====*/
+
+/*==== common item css start =====*/
+.post-item {
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    @include transition ($transition);
+    &:hover {
+        box-shadow: -1px 7px 35px rgba(0, 0, 0, .05);
+        .post-thumb {
+            img {
+                transform: scale(1.1);
+            }
+            .post-wish {
+                transform: scale3d(1.1);
+                right: 0;
+            }
+            .post-cart {
+                opacity: 1;
+                bottom: 10px;
+            }
+        }
+        .post-text {
+            h6 {
+                a {
+                    color: $theme-color;
+                }
+            }
+        }
+        &::after {
+            animation: collection 1s;
+        }
+    }
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        background: rgba(255,255,255,0.2);
+        border-radius: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    .post-thumb {
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+        @include breakpoint (sm) {
+            height: 200px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+            @include transition ($transition);
+        }
+        .post-wish {
+            position: absolute;
+            top: 0;
+            right: -50px;
+            transform: scale3d(0);
+            @include transition ($transition);
+            button {
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                cursor: pointer;
+                border-radius: 0 0 0 5px;
+                &.active {
+                    background-color: $theme-color!important;
+                    span {
+                        svg {
+                            g {
+                                path {
+                                    fill: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .post-cart {
+            position: absolute;
+            bottom: -38px;
+            opacity: 0;
+            width: 100%;
+            text-align: center;
+            @include transition ($transition);
+            button {
+                padding: 10px 15px;
+                display: inline-flex;
+                background: transparent;
+                &.custom-btn {
+                    background: $theme-color;
+                    border-radius: 20px;
+                    &::before {
+                        border-radius: 20px;
+                        background: #000;
+                    }
+                    span {
+                        color: $white-color;
+                        font-size: 12px;
+                        svg {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .post-text {
+        padding-top: 12px;
+        .rating {
+            span {
+                padding-top: 10px;
+                padding-right: 3px;
+                display: inline-block;
+            }
+        }
+        h6 {
+            margin: 0;
+            padding: 5px;
+            font-size: 13px;
+            @include breakpoint (xxl) {
+                font-size: 16px;
+            }
+            a {
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        p {
+            margin: 0;
+            color: #000;
+            font-size: 16px;
+        }
+        &.style-one {
+            @extend %flex;
+            justify-content: center;
+            align-items: center;
+            span.discount {
+                color: #fff;
+                font-size: 14px;
+                padding: 2.5px 12px;
+                border-radius: 15px;
+                background: red;
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+    }
+}
+/*==== common item css ends  =====*/
+
 
 
 //#==== form css start ====#//
@@ -321,6 +583,7 @@ form {
 }
 //#==== form css end ====#//
 
+
 /*======= all scrollbar css =====*/
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -335,32 +598,7 @@ form {
 }
 /*======= all scrollbar css =====*/
 
-@keyframes preloader-fx {
-    0% {
-        -webkit-transform: scale(0, 0);
-        transform: scale(0, 0);
-        opacity: 0.5;
-    }
-
-    100% {
-        -webkit-transform: scale(1, 1);
-        transform: scale(1, 1);
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes preloader-fx {
-    0% {
-        -webkit-transform: scale(0, 0);
-        opacity: 0.5;
-    }
-
-    100% {
-        -webkit-transform: scale(1, 1);
-        opacity: 0;
-    }
-}
-
+//? component //?
 
 %flex {
     display: flex;
@@ -389,6 +627,8 @@ form {
 %widget-pad {
     padding: 20px 20px 30px;
 }
+
+//? component //?
 
 
 //? common social media
@@ -478,6 +718,41 @@ form {
 }
 
 //? all social media ends 
+
+
+
+@keyframes preloader-fx {
+    0% {
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes preloader-fx {
+    0% {
+        -webkit-transform: scale(0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+
+@keyframes collection{
+    0%{opacity:1}
+    40%{opacity:1}
+    100%{width:200%;height:200%;opacity:0}
+}
 
 
 
