@@ -1,0 +1,78 @@
+//*==== pageheader css start ====*//
+.page-header {
+    padding: 40px 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../assets/images/page-header/search.jpg);
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: .8;
+        background: linear-gradient(45deg, $theme-color, $primary-color) 
+    }
+    .banner-content {
+        position: relative;
+        z-index: 9;
+        .content-search {
+            @extend %flex;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            align-items: center;
+            .dropdown {
+                width: 25%;
+                @include breakpoint (sm) {
+                    width: 20%;
+                }
+                button {
+                    height: 45px;
+                    width: 100%;
+                    padding: 5px 7px;
+                    border-radius: 25px 0 0 25px;
+                    border-right: 1px solid $theme-color;
+                    background: $white-color;
+                    @include breakpoint (max-sm) {
+                        font-size: 12px;
+                    }
+                }
+            }
+            input.form-control {
+                height: 45px;
+                border: none;
+                border-radius: 0 25px 25px 0;
+                width: calc(100% - 20%);
+                @include breakpoint (max-sm) {
+                    font-size: 12px;
+                    padding-left: 20px;
+                    width: calc(100% - 25%);
+                }
+                &:focus {
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+            .search-icon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 50px;
+                transform: translateY(-51%);
+                i {
+                    color: $white-color;
+                    height: 45px;
+                    line-height: 45px;
+                    width: 100%;
+                    text-align: center;
+                    border-radius: 0 25px 25px 0;
+                    background: $theme-color;
+                }
+            }
+        }
+    }
+}
+//*==== pageheader css ends  ====*//

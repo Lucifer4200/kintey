@@ -22,17 +22,23 @@ header {
                    
                 }
                 &:hover {
-                    .dropdown-menu {
-                        opacity: 1;
+                    .sub-menu {
                         transform: translateY(0);
+                        opacity: 1;
                         visibility: visible;
                     }
                 }
-                .dropdown-menu {
+                .sub-menu {
+                    position: absolute;
+                    top: 100%;
+                    z-index: 9;
+                    background: #ffffff;
+                    padding: 0;
+                    transform: translateY(35px);
                     opacity: 0;
-                    transform: translateY(30px);
-                    background: #eef1f3;
-                    transition: all 0.3s ease-in-out;
+                    visibility: hidden;
+                    transition: all ease 0.3s;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .18);
                     ul.drop-list {
                         margin: 0;
                         padding: 10px;
@@ -66,7 +72,8 @@ header {
                         margin: 0 10px;
                         a {
                             color: #000;
-                            padding: 2.5px 10px;
+                            font-size: 14px;
+                            padding: 2px 10px 4px;
                             border-radius: 4px;
                             position: relative;
                             border: 1px solid $theme-color;
@@ -102,6 +109,7 @@ header {
         }
     }
     .header-bottom {
+        position: relative;
         padding: 15px 0;
         .bottom-item {
             ul.menu-list {
@@ -117,7 +125,7 @@ header {
                         padding: 5px 10px;
                     }
                     &:hover {
-                        .dropdown-menu {
+                        .sub-menu {
                             opacity: 1;
                             transform: translateY(0);
                             visibility: visible;
@@ -129,11 +137,20 @@ header {
     }
 }
 
-.dropdown-menu {
-    opacity: 0;
-    transform: translateY(30px);
-    background: #eef1f3;
-    transition: all 0.3s ease-in-out;
+.sub-menu {
+    display: none;
+    @include breakpoint (lg) {
+        position: absolute;
+        top: 100%;
+        z-index: 111;
+        background: #ffffff;
+        padding: 0;
+        transform: translateY(35px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+    }
     ul.drop-list {
         margin: 0;
         padding: 10px;

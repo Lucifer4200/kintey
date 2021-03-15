@@ -1,12 +1,12 @@
 /*!
 <----------------------------------------
-  Theme Name: Loyel
+  Theme Name: Kintey
   Theme URI: http:/ unitedit.com
   Author: unitedit.com.
   Author URI: http:/ unitedit.com
-  Description: Loyel  is a Creative HTML5 Template for Saas, Startup & any ytpe of confarence.
+  Description: Kintey  is a Creative HTML5 Template for Saas, Startup & any ytpe of confarence.
   Version: 1.0.0
-  Tags: app, Loyel E-ccomerce, app landing page, app showcase template, application services, gradient color, landing, marketing, responsive template, seo, software, Software Services, startup, tech, web application landing page.
+  Tags: app, Kintey E-ccomerce, app landing page, app showcase template, application services, gradient color, landing, marketing, responsive template, seo, software, Software Services, startup, tech, web application landing page.
 ---------------------------------------->
 */
 /*
@@ -159,14 +159,14 @@ button.btn {
 }
 .btn{
     font-size: 14px;
-    padding: 8px 25px;
+    padding: 12px 25px;
     border: none;
     cursor: pointer;
     outline: none;
     display: inline-flex;
     align-items: center;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 25px;
     position: relative;
     background: $theme-color;
     transition: all 0.3s ease-in-out;
@@ -194,6 +194,10 @@ button.btn {
         animation: ripple 1s;
         transform: scale(0);
     }
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid $white-color;
 }
 /*======= all custom btn css =======*/
 

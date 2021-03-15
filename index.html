@@ -32,7 +32,7 @@
                     </div>
                     <div class="header-point d-none d-lg-block">
                         <button type="button">Help <i class="fa fa-angle-down"></i></button>
-                        <div class="dropdown-menu d-flex">
+                        <div class="sub-menu d-flex">
                             <ul class="drop-list">
                                 <li><span class="title">Search By</span></li>
                                 <li><a href="#">Top Sellers</a></li>
@@ -59,13 +59,13 @@
                 </div>
             </div>
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom d-none d-lg-block">
             <div class="container">
                 <div class="bottom-item">
                     <ul class="menu-list">
                         <li>
                             <a href="#0">Electronics</a>
-                            <div class="dropdown-menu d-flex">
+                            <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -84,7 +84,7 @@
                         </li>
                         <li>
                             <a href="#">Vehicles</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -103,7 +103,7 @@
                         </li>
                         <li>
                             <a href="#0">Fashion</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -122,7 +122,7 @@
                         </li>
                         <li>
                             <a href="#0">Health & Beauty</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -141,7 +141,7 @@
                         </li>
                         <li>
                             <a href="#0">Home & Living</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -160,7 +160,7 @@
                         </li>
                         <li>
                             <a href="#0">Property</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -179,7 +179,7 @@
                         </li>
                         <li>
                             <a href="#0">Machinery</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -198,7 +198,7 @@
                         </li>
                         <li>
                             <a href="#0">Food & Agriculture</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -217,7 +217,7 @@
                         </li>
                         <li>
                             <a href="#0">More</a>
-                             <div class="dropdown-menu d-flex">
+                             <div class="sub-menu d-flex">
                                 <ul class="drop-list">
                                     <li><span class="title">Search By</span></li>
                                     <li><a href="#">Top Sellers</a></li>
@@ -240,6 +240,37 @@
         </div>
     </header>
     <!-- header area ends  -->
+
+    <!-- pageheader area start -->
+    <section class="page-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="banner-content">
+                <div class="content-search">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Product
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div>
+                    <input type="text" class="form-control" placeholder="Search keywords...." />
+                    <div class="search-icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="content-button mt-4 text-center d-none d-sm-block">
+                    <button type="button" class="btn btn-outline me-3"><span>View all products</span></button>
+                    <button type="button" class="btn btn-outline"><span>Popular products</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pageheader area ends  -->
+    
 
     <!-- optional js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
