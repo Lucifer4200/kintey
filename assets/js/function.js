@@ -85,6 +85,83 @@ var swiper = new Swiper('.brand-slider', {
     }
 });
 
+ //product slider activetion
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        575: {
+        slidesPerView: 4,
+        }
+    },
+});
+var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    autoplay: true,
+    navigation: {
+    nextEl: '.product-button-next',
+    prevEl: '.product-button-prev',
+    },
+    thumbs: {
+    swiper: galleryThumbs
+    }
+});
+
+// product responsive slider 
+var mySwiper14 = new Swiper('.swiper-responsive-breakpoints', {
+    slidesPerView: 1,
+    spaceBetween: 55,
+    autoplay : {
+        delay : 5000,
+        disableOnInteraction: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1300: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 55,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      }
+    }
+  });
+
+  // product color options
+    document.addEventListener("DOMContentLoaded", function(event) { // <-- add this wrapper
+    var navitem = document.querySelectorAll('.nav-item');
+    
+        if (navitem) {
+        
+        navitem.forEach(function(el, key){
+            
+            el.addEventListener('click', function () {
+                console.log(key);
+            
+                el.classList.toggle("active");
+                
+                navitem.forEach(function(ell, els){
+                    if(key !== els) {
+                        ell.classList.remove('active');
+                    }
+                    console.log(els);
+                });
+            });
+        });
+        }
+    });
+
 // Theme switcher
 $(document).ready(function(){
     $(".theme-switcher").click(function(){

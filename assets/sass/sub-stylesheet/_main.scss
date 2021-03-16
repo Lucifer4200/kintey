@@ -1,7 +1,7 @@
 //*===== req quotation css start ====*//
 .request-qa {
     .section-wrapper {
-        padding-top: 30px;
+        padding-top: 20px;
         .quotation-slider {
             .req-container {
                 position: relative;
@@ -9,8 +9,12 @@
                 .swiper-wrapper {
                     .swiper-slide {
                         .req-thumb {
+                            @include breakpoint (lg) {
+                                height: 330px;
+                            }
                             img {
                                 width: 100%;
+                                height: 100%;
                             }
                         }
                     }
@@ -66,7 +70,6 @@
     }
 }
 //*===== req quotation css ends  ====*//
-
 
 //*===== weekly deals css start  ====*//
 .weekly-deals, .buyer-zone {
@@ -395,3 +398,464 @@ footer {
     }
 }
 //*==== Footer area css start =====*//
+
+//*====== footerbottom css start =====*//
+.footer-bottom {
+    padding: 25px 0;
+    background: #192027;
+    .copyright-text {
+        text-align: center;
+        p {
+            margin: 0;
+            color: $white-color;
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+//*====== footerbottom css ends  =====*//
+
+
+//?======== product details page start =========?//
+
+//!===== product variation slider css ====!//
+.product-variation {
+    .product-container {
+        position: relative;
+        overflow: hidden;
+        &.gallery-top {
+            position: relative;
+            .swiper-wrapper {
+                .swiper-slide {
+                    .thumb {
+                        margin: 10px 5px;
+                        padding: 100px;
+                        background: $white-color;
+                        box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.10);
+                        @include breakpoint (max-sm) {
+                            padding: 50px;
+                        }
+                        img {
+                            height: 200px;
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .product-button-next {
+                    opacity: 1;
+                    right: 8px;
+                    visibility: visible;
+                }
+                .product-button-prev {
+                    opacity: 1;
+                    left: 8px;
+                    visibility: visible;
+                }
+                
+            }
+            .product-button-next, .product-button-prev {
+                position: absolute;
+                top: 50%;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                font-size: 20px;
+                text-align: center;
+                cursor: pointer;
+                border: 1px solid $theme-color;
+                transform: translate(0, -50%);
+                border-radius: 5px;
+                z-index: 1;
+                opacity: 0;
+                visibility: hidden;
+            }
+            .product-button-next {
+                right: -25px;
+                @include transition ($transition);
+                i {
+                    font-size: 25px;
+                    color: $theme-color;
+                }
+            }
+            .product-button-prev {
+                left: -25px;
+                @include transition ($transition);
+                i {
+                    font-size: 25px;
+                    color: $theme-color;
+                }
+            }
+        }
+        &.gallery-thumbs  {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &.swiper-slide-thumb-active {
+                        .thumb-content {
+                                img {
+                                    filter: grayscale(100%)
+                                }
+                            }
+                    }
+                    .thumb-content {
+                        height: 100px;
+                        width: 100px;
+                        margin: 5px;
+                        padding: 10px;
+                        cursor: pointer;
+                        background: $white-color;
+                        box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.10);
+                        img {
+                           height: 100%;
+                           width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//!===== product variation slider css ====!//
+.menu-details {
+    .review {
+        .review-tab-content {
+            .nav{
+                border-bottom: 1px solid #ebebeb;
+                .nav-link {
+                    color: #000;
+                    padding: 18px 20px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    background: $white-color;
+                    @include breakpoint(max-md) {
+                        margin-top: 10px;
+                    }
+                    @include breakpoint (max-mobile) {
+                        padding: 15px 14px;
+                    }
+                    &.active {
+                        color: #fff;
+                        background: $theme-color;
+                        border-bottom: 2px solid $theme-color;
+                    }
+                }
+            }
+            .nav-tabs {
+                .nav-item {
+                    a.nav-link  {
+                        @include breakpoint (max-sm) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .tabcontent {
+                width: 100%;
+                margin-top: 15px;
+                padding: 20px;
+                -webkit-animation: fadeEffect 1s;
+                animation: fadeEffect 1s;
+
+                .post-text {
+                    h4 {
+                        margin: 0;
+                        text-transform: capitalize;
+                        padding-bottom: 10px;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                    .inner-text {
+                        padding-top: 30px;
+                        h4 {
+                            margin: 0;
+                            padding-bottom: 10px;
+                        }
+                        p {
+                            margin: 0;
+                            padding-bottom: 15px;
+                        }
+                    }
+                    img {
+                        float: right;
+                        padding: 0 20px;
+                        width: 450px;
+                        @include breakpoint (max-lg) {
+                            width: 250px;
+                        }
+                    }
+                }
+                .food-specification {
+                    padding-top: 30px;
+                    table {
+                        width: 100%;
+                        @include breakpoint (xl) {
+                            width: 50%;
+                        }
+                        tbody {
+                            border: 1.5px solid $border-color;
+                            tr {
+                                border-left:none;
+                                border-bottom: 1.5px solid $border-color;
+                                th {
+                                    padding: 10px;
+                                    font-weight: 400;
+                                    border-right: 1.5px solid $border-color;
+                                }
+                                td {
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .review-list {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            list-style: none;
+                            padding: 15px 20px;
+                            margin: 10px 0;
+                            background: $white-color;
+                            border-radius: 3px;
+                            box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.10);
+                            .rating {
+                                span {
+                                    color: $theme-color;
+                                }
+                            }
+                            p {
+                                margin: 0;
+                                padding-top: 5px;
+                            }
+                        }
+                    }
+                }
+                .review-form {
+                    .comment-respos {
+                        h5 {
+                            margin: 0;
+                            font-weight: normal;
+                            padding-bottom: 20px;
+                        }
+                        form {
+                            p {
+                                display: flex;
+                                width: 100%;
+                                @include breakpoint (mobile) {
+                                    display: block;
+                                }
+                                del {
+                                    span {
+                                        i {
+                                            color: $primary-color;
+                                            transition: all 0.3s ease-in-out;
+                                            &:hover {
+                                                color: $theme-color;
+                                            }
+                                        }
+                                    }
+                                }
+                                label {
+                                    flex: 0 0 30%;
+                                    font-weight: 400;
+                                    vertical-align: middle;
+                                    max-width: 30%;
+                                }
+                                textarea {
+                                    width: 100%;
+                                    border-radius: 3px;
+                                    border: 1px solid $border-color;
+                                }
+                                input {
+                                    width: 100%;
+                                    border-radius: 3px;
+                                    border: 1px solid $border-color;
+                                }
+                                button {
+                                    padding: 10px 30px;
+                                    margin-left: 30%;
+                                    font-weight: bold;
+                                    @include breakpoint (mobile) {
+                                        float: left;
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+//!===== product desciption css start =====!//
+
+
+//?======== product details page ends  =========?//
+
+
+//?==== product link page css start =====?//
+.product-link {
+    padding-bottom: 40px;
+    background: #f8f9fa;
+    .section-wrapper {
+        .content-menu {
+            ul.menu-list {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                @extend %flex;
+                align-items: center;
+                justify-content: flex-start;
+                li {
+                    @extend %flex;
+                    align-items: center;
+                    list-style: none;
+                    width: 100%;
+                    @include breakpoint (max-sm) {
+                        width: calc(100% / 2);
+                    }
+                    @include breakpoint (max-mobile) {
+                        width: calc(100% / 1);
+                    }
+                    @include breakpoint (sm) {
+                        width: calc(100% / 3);
+                    }
+                    @include breakpoint (md) {
+                        width: calc(100% / 5);
+                    }
+                    @include breakpoint (lg) {
+                        width: calc(100% / 8);
+                    }
+                    &.active {
+                        background: $theme-color;
+                        a {
+                            span {
+                                i {
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        height: 70px;
+                        margin: 5px;
+                        width: 100%;
+                        @extend %flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        background: $white-color;
+                        span {
+                            color: #000;
+                            width: 20%;
+                            i {
+                                font-size: 30px;
+                                color: #ebebeb;
+                            }
+                        }
+                        p {
+                            margin: 0;
+                            font-size: 12px;
+                            width: 70%;
+                            padding-left: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .product-all-sublink {
+            margin-top: 40px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: -9px 3px 35px rgba(0, 0, 0,  .05);
+            background: $white-color;
+            &.active {
+                margin-top: 200px;
+            }
+            .menu-header {
+                padding-bottom: 16px;
+                i {
+                    font-size: 35px;
+                    color: $theme-color
+                }
+                h4 {
+                    text-transform: uppercase;
+                    border-bottom: 2px solid $theme-color;
+                    @include breakpoint (max-sm) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .submenu-inner {
+                width: 100%;
+                @extend %flex;
+                align-items: flex-start;
+                ul.submenu-list {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    @include breakpoint (max-sm) {
+                        width: calc(100% / 2);
+                    }
+                    @include breakpoint (sm) {
+                        width: calc(100% / 2);
+                    }
+                    @include breakpoint (md) {
+                        width: calc(100% / 3);
+                    }
+                    @include breakpoint (lg) {
+                        width: calc(100% / 6);
+                    }
+                    li {
+                        span.menu-title {
+                            color: #000;
+                            font-weight: 600;
+                            display: inline-block;
+                            padding-bottom: 5px;
+                        }
+                       a {
+                           color: #000;
+                           font-size: 12px;
+                           padding-bottom: 5px;
+                           position: relative;
+                           text-decoration: none;
+                           transition: all .3s ease-in-out;
+                           &:hover {
+                               color: $theme-color;
+                               transform: translateX(5px);
+                               &::after {
+                                   width: 100%;
+                                   left: 0;
+                                   right: auto;
+                               }
+                           }
+                           &::after {
+                               @extend %absolute;
+                                bottom: 0;
+                                right: 0;
+                                left: auto;
+                                width: 0;
+                                height: 2px;
+                                background: $theme-color;
+                                transition: all 0.3s ease-in-out;
+                           }
+                       }
+                    }
+                }
+            }
+        }
+    }
+}
+//?==== product link page css ends  =====?//
+

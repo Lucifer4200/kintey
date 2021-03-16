@@ -3632,10 +3632,11 @@ a:hover {
   }
 }
 .login-area {
+  background: #161d31;
   transition: all 0.3s ease-in-out;
 }
 .login-area.dark {
-  background: #161d31;
+  background: #fff;
 }
 .login-area .card {
   z-index: 111;
@@ -3710,6 +3711,8 @@ span.input-group-text {
   cursor: pointer;
   width: 2.5em;
   background-image: url(../../assets/images/login/moon-circle.svg);
+  
+  
 }
 .form-switch input.form-check-input:checked {
   background-image: url(../../assets/images/login/moon.svg);

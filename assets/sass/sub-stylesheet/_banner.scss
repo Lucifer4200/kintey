@@ -74,5 +74,20 @@
             }
         }
     }
+    &.style-one {
+        padding: 20px 0;
+        .page-linker {
+            z-index: 9;
+            position: relative;
+           ul {
+               li {
+                   margin: 0 5px;
+                  a, span {
+                    color: $white-color;
+                  }
+               }
+           }
+        }
+    }
 }
 //*==== pageheader css ends  ====*//
