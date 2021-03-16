@@ -11,6 +11,11 @@
     font-size: 14px;
 }
 
+.item-features i {
+  font-size: 30px;
+  color: #0674ec;
+}
+
 i.font-large-2 {
   font-size: 70px;
 }
