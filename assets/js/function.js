@@ -11,14 +11,14 @@ var swiper = new Swiper('.req-container', {
 
 // weekly products slider
 var swiper = new Swiper('.weekly-slider', {
-    slidesPerView: 2,
+    slidesPerView: 1.5,
     navigation: {
         nextEl: '.weekly-button-next',
         prevEl: '.weekly-button-prev',
     },
     breakpoints: {
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 5,
         },
         768: {
             slidesPerView: 3,
@@ -27,14 +27,14 @@ var swiper = new Swiper('.weekly-slider', {
             slidesPerView: 2,
         },
         425: {
-            slidesPerView: 2,
+            slidesPerView: 1.5,
         }
     },
 });
 
 // buyer products slider
 var swiper = new Swiper('.buyer-slider', {
-    slidesPerView: 2,
+    slidesPerView: 1.5,
     autoplay: {
         delay: 2500,
         disableOnInteraction: true,
@@ -45,7 +45,7 @@ var swiper = new Swiper('.buyer-slider', {
     },
     breakpoints: {
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 5,
         },
         768: {
             slidesPerView: 3,
@@ -54,7 +54,35 @@ var swiper = new Swiper('.buyer-slider', {
             slidesPerView: 2,
         },
         425: {
+            slidesPerView: 1.5,
+        }
+    },
+});
+
+
+// trending products slider
+var swiper = new Swiper('.trending-slider', {
+    slidesPerView: 1.5,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+    },
+    navigation: {
+        nextEl: '.trending-button-next',
+        prevEl: '.trending-button-prev',
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 5,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        576: {
             slidesPerView: 2,
+        },
+        425: {
+            slidesPerView: 1.5,
         }
     },
 });

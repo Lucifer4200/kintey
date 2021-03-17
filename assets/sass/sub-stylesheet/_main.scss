@@ -73,80 +73,122 @@
 
 //*===== weekly deals css start  ====*//
 .weekly-deals, .buyer-zone {
-    .section-wrapper {
-        .deals-banner {
-            padding: 20px;
-            background-size: cover;
-            background-position: center;
-            background-image: url(../../assets/images/weekly/offer.jpg);
-            .discount-wrap {
-                padding-bottom: 20px;
-                text-align: center;
-                @include breakpoint (xl) {
-                    padding-bottom: 30px;
-                }
-                h3 {
-                    margin: 0;
-                    color: $white-color;
-                    span {
-                        font-size: 18px;
-                    }
-                    @include breakpoint (sm) {
-                        font-size: 30px;
-                    }
-                }
-            }
-            .discont-end {
-                text-align: center;
-                ul {
-                    padding: 0;
-                    margin: 0;
-                    list-style: none;
-                    @extend %flex;
-                    justify-content: center;
-                    li {
-                        margin: 5px;
-                        &:nth-child(1), &:nth-child(2) {
-                            a {
-                                color: $theme-color;
-                                background: #dff0d8;
-                            }
-                        }
-                        &:nth-child(4) {
-                            a {
-                                color: $theme-color;
-                                background: $section-bg;
-                            }
-                        }
-                        &:nth-child(5) {
-                            a {
-                                color: $white-color;
-                                background: $theme-color;
-                            }
-                        }
+    .section-header {
+        .discont-end {
+            z-index: 9;
+            background: #fff;
+            position: relative;
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                @extend %flex;
+                justify-content: center;
+                li {
+                    margin: 0 5px;
+                    &:nth-child(1), &:nth-child(2) {
                         a {
-                            color: #fff;
-                            padding: 2.5px 8px;
-                            text-decoration: none;
-                            display: inline-block;
+                            color: $theme-color;
+                            background: #dff0d8;
                         }
                     }
-                }
-            }
-            .deals-btn {
-                text-align: center;
-                margin-top: 20px;
-                @include breakpoint (xl) {
-                    margin-top: 30px;
-                }
-                .btn {
-                    background: $white-color;
-                    span {
-                        color: #000;
+                    &:nth-child(4) {
+                        a {
+                            color: $theme-color;
+                            background: $section-bg;
+                        }
+                    }
+                    &:nth-child(5) {
+                        a {
+                            color: $white-color;
+                            background: $theme-color;
+                        }
+                    }
+                    a {
+                        color: #fff;
+                        padding: 2.5px 8px;
+                        text-decoration: none;
+                        display: inline-block;
                     }
                 }
             }
         }
+    }
+    .section-wrapper {
+        position: relative;
+        // .deals-banner {
+        //     padding: 20px;
+        //     background-size: cover;
+        //     background-position: center;
+        //     background-image: url(../../assets/images/weekly/offer.jpg);
+        //     .discount-wrap {
+        //         padding-bottom: 20px;
+        //         text-align: center;
+        //         @include breakpoint (xl) {
+        //             padding-bottom: 30px;
+        //         }
+        //         h3 {
+        //             margin: 0;
+        //             color: $white-color;
+        //             span {
+        //                 font-size: 18px;
+        //             }
+        //             @include breakpoint (sm) {
+        //                 font-size: 30px;
+        //             }
+        //         }
+        //     }
+        //     .discont-end {
+        //         text-align: center;
+        //         ul {
+        //             padding: 0;
+        //             margin: 0;
+        //             list-style: none;
+        //             @extend %flex;
+        //             justify-content: center;
+        //             li {
+        //                 margin: 5px;
+        //                 &:nth-child(1), &:nth-child(2) {
+        //                     a {
+        //                         color: $theme-color;
+        //                         background: #dff0d8;
+        //                     }
+        //                 }
+        //                 &:nth-child(4) {
+        //                     a {
+        //                         color: $theme-color;
+        //                         background: $section-bg;
+        //                     }
+        //                 }
+        //                 &:nth-child(5) {
+        //                     a {
+        //                         color: $white-color;
+        //                         background: $theme-color;
+        //                     }
+        //                 }
+        //                 a {
+        //                     color: #fff;
+        //                     padding: 2.5px 8px;
+        //                     text-decoration: none;
+        //                     display: inline-block;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     .deals-btn {
+        //         text-align: center;
+        //         margin-top: 20px;
+        //         @include breakpoint (xl) {
+        //             margin-top: 30px;
+        //         }
+        //         .btn {
+        //             background: $white-color;
+        //             span {
+        //                 color: #000;
+        //             }
+        //         }
+        //     }
+        // }
         .weekly-slider {
             overflow: hidden;
         }
@@ -177,6 +219,12 @@
     }
 }
 //*===== weekly deals css ends  ====*//
+
+//*====== top category css start ====*//
+.top-category {
+
+}
+//*====== top category css ends  ====*//
 
 //*===== join us today css start ====*//
 .join-marketplace {
@@ -235,7 +283,7 @@
                             a {
                                 &.brand-logo {
                                     width: 100%;
-                                    height: 60px;
+                                    height: 135px;
                                     overflow: hidden;
                                     position: relative;
                                     &:hover {
@@ -297,6 +345,62 @@
     }
 }
 //*===== brand slider css start =====*//
+
+//*===== supplier css start =====*//
+.supplier-regions {
+    .section-wrapper {
+        padding-top: 30px;
+        .supplier-list {
+            ul.list-item {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                @extend %flex;
+                align-items: center;
+                justify-content: flex-start;
+                li {
+                    list-style: none;
+                    width: calc(100% / 2);
+                    @include breakpoint (sm) {
+                        width: calc(100% / 3);
+                    }
+                    @include breakpoint (md) {
+                        width: calc(100% / 4);
+                    }
+                    @include breakpoint (lg) {
+                        width: calc(100% / 6);
+                    }
+                    @include breakpoint (xl) {
+                        width: calc(100% / 8);
+                        }
+                    &:hover {
+                        span {
+                            color: $theme-color;
+                        }
+                    }
+                    &:last-child {
+                        a {
+                            color: $theme-color;
+                        }
+                    }
+                    a {
+                        margin: 5px;
+                        span {
+                            font-size: 14px;
+                            transition: all 0.3s ease-in-out;
+                            img {
+                                height: 25px;
+                                width: 25px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//*===== supplier css ends  =====*//
 
 //*==== Footer area css start =====*//
 footer {
