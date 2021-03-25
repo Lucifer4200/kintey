@@ -221,8 +221,90 @@
 //*===== weekly deals css ends  ====*//
 
 //*====== top category css start ====*//
-.top-category {
-
+.top-category{
+    .section-wrapper {
+        .element-categories-table {
+            ul.categories-item {
+                padding: 0;
+                margin: 0;
+                @extend %flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+                width: 100%;
+                li {
+                    text-align: center;
+                    width: calc(100% / 2);
+                    border-right: 1px solid #f1f1f1;
+                    border-bottom: 1px solid #f1f1f1;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        box-shadow: 0 0 10px 0px rgba(0, 0, 0, .12);
+                    }
+                    &:nth-child(6), 
+                    &:nth-child(7), 
+                    &:nth-child(8), 
+                    &:nth-child(9), 
+                    &:nth-child(10) {
+                        border-bottom: 0;
+                    }
+                    &:nth-child(5), 
+                    &:nth-child(10) {
+                        border-right: 0;
+                    }
+                    @include breakpoint (md) {
+                        width: calc(100% / 3);
+                    }
+                    @include breakpoint (lg) {
+                        width: calc(100% / 5);
+                    }
+                    @include breakpoint (max-lg) {
+                        &:nth-child(6) {
+                            border-bottom: 1px solid #f1f1f1;
+                            border-left: 1px solid #f1f1f1;
+                        }
+                        &:nth-child(3),
+                        &:nth-child(6),
+                        &:nth-child(9) {
+                            border-right: 0;
+                        }
+                        &:nth-child(10) {
+                            border-top: 1px solid #f1f1f1;
+                            border-right: 1px solid #f1f1f1;
+                        }
+                    }
+                    @include breakpoint (max-md) {
+                        &:nth-child(2),
+                        &:nth-child(4),
+                        &:nth-child(8),
+                        &:nth-child(10) {
+                            border-right: 0;
+                        }
+                        &:nth-child(3) {
+                            border-right: 1px solid #f1f1f1;
+                        }
+                        &:nth-child(9) {
+                            border-top: 1px solid #f1f1f1;
+                            border-right: 1px solid #f1f1f1;
+                        }
+                    }
+                    a {
+                        padding: 35px;
+                        svg {
+                            height: 60px;
+                            width: 60px;
+                            g {
+                                fill: $theme-color;
+                            }
+                        }
+                        h6 {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 //*====== top category css ends  ====*//
 

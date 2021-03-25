@@ -9,9 +9,9 @@ header {
             align-items: center;
             justify-content: space-between;
             .header-logo {
-                img {
-
-                }
+               img {
+                   height: 40px;
+               }
             }
             .header-point {
                 button {
@@ -31,7 +31,6 @@ header {
                 .sub-menu {
                     position: absolute;
                     top: 100%;
-                    z-index: 9;
                     background: #ffffff;
                     padding: 0;
                     transform: translateY(35px);
@@ -142,7 +141,6 @@ header {
     @include breakpoint (lg) {
         position: absolute;
         top: 100%;
-        z-index: 111;
         background: #ffffff;
         padding: 0;
         transform: translateY(35px);
