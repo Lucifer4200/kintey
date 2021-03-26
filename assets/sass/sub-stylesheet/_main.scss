@@ -220,8 +220,9 @@
 }
 //*===== weekly deals css ends  ====*//
 
-//*====== top category css start ====*//
-.top-category{
+//*====== popular category css start ====*//
+.popular-category{
+    background: #f8f8f8;
     .section-wrapper {
         .element-categories-table {
             ul.categories-item {
@@ -229,70 +230,79 @@
                 margin: 0;
                 @extend %flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 list-style: none;
                 width: 100%;
+                @include breakpoint (xl) {
+                    justify-content: space-between;
+                }
                 li {
+                    margin: 5px;
                     text-align: center;
-                    width: calc(100% / 2);
-                    border-right: 1px solid #f1f1f1;
-                    border-bottom: 1px solid #f1f1f1;
+                    width: calc(100% / 2 - 10px);
+                    background: $white-color;
+                    // border-right: 1px solid #f1f1f1;
+                    // border-bottom: 1px solid #f1f1f1;
                     transition: all 0.3s ease-in-out;
                     &:hover {
                         box-shadow: 0 0 10px 0px rgba(0, 0, 0, .12);
                     }
-                    &:nth-child(6), 
-                    &:nth-child(7), 
-                    &:nth-child(8), 
-                    &:nth-child(9), 
-                    &:nth-child(10) {
-                        border-bottom: 0;
-                    }
-                    &:nth-child(5), 
-                    &:nth-child(10) {
-                        border-right: 0;
-                    }
+                    // &:nth-child(6), 
+                    // &:nth-child(7), 
+                    // &:nth-child(8), 
+                    // &:nth-child(9), 
+                    // &:nth-child(10) {
+                    //     border-bottom: 0;
+                    // }
+                    // &:nth-child(5), 
+                    // &:nth-child(10) {
+                    //     border-right: 0;
+                    // }
                     @include breakpoint (md) {
-                        width: calc(100% / 3);
+                        width: calc(100% / 3 - 10px);
                     }
                     @include breakpoint (lg) {
-                        width: calc(100% / 5);
+                        width: calc(100% / 4 - 10px);
                     }
-                    @include breakpoint (max-lg) {
-                        &:nth-child(6) {
-                            border-bottom: 1px solid #f1f1f1;
-                            border-left: 1px solid #f1f1f1;
-                        }
-                        &:nth-child(3),
-                        &:nth-child(6),
-                        &:nth-child(9) {
-                            border-right: 0;
-                        }
-                        &:nth-child(10) {
-                            border-top: 1px solid #f1f1f1;
-                            border-right: 1px solid #f1f1f1;
-                        }
+                    @include breakpoint (xl) {
+                        width: calc(100% / 6 - 10px);
                     }
-                    @include breakpoint (max-md) {
-                        &:nth-child(2),
-                        &:nth-child(4),
-                        &:nth-child(8),
-                        &:nth-child(10) {
-                            border-right: 0;
-                        }
-                        &:nth-child(3) {
-                            border-right: 1px solid #f1f1f1;
-                        }
-                        &:nth-child(9) {
-                            border-top: 1px solid #f1f1f1;
-                            border-right: 1px solid #f1f1f1;
-                        }
-                    }
+                    // @include breakpoint (max-lg) {
+                    //     &:nth-child(6) {
+                    //         border-bottom: 1px solid #f1f1f1;
+                    //         border-left: 1px solid #f1f1f1;
+                    //     }
+                    //     &:nth-child(3),
+                    //     &:nth-child(6),
+                    //     &:nth-child(9) {
+                    //         border-right: 0;
+                    //     }
+                    //     &:nth-child(10) {
+                    //         border-top: 1px solid #f1f1f1;
+                    //         border-right: 1px solid #f1f1f1;
+                    //     }
+                    // }
+                    // @include breakpoint (max-md) {
+                    //     &:nth-child(2),
+                    //     &:nth-child(4),
+                    //     &:nth-child(8),
+                    //     &:nth-child(10) {
+                    //         border-right: 0;
+                    //     }
+                    //     &:nth-child(3) {
+                    //         border-right: 1px solid #f1f1f1;
+                    //     }
+                    //     &:nth-child(9) {
+                    //         border-top: 1px solid #f1f1f1;
+                    //         border-right: 1px solid #f1f1f1;
+                    //     }
+                    // }
                     a {
-                        padding: 35px;
+                        padding: 24px 15px;
+                        display: block;
                         svg {
-                            height: 60px;
-                            width: 60px;
+                            height: 50px;
+                            width: 50px;
                             g {
                                 fill: $theme-color;
                             }
@@ -306,7 +316,7 @@
         }
     }
 }
-//*====== top category css ends  ====*//
+//*====== popular category css ends  ====*//
 
 //*===== join us today css start ====*//
 .join-marketplace {
