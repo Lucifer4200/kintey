@@ -166,41 +166,108 @@ var mySwiper14 = new Swiper('.swiper-responsive-breakpoints', {
     }
   });
 
-  // product color options
-    document.addEventListener("DOMContentLoaded", function(event) { // <-- add this wrapper
-    var navitem = document.querySelectorAll('.nav-item');
+// product color options
+document.addEventListener("DOMContentLoaded", function(event) { // <-- add this wrapper
+var navitem = document.querySelectorAll('.nav-item');
+
+    if (navitem) {
     
-        if (navitem) {
+    navitem.forEach(function(el, key){
         
-        navitem.forEach(function(el, key){
+        el.addEventListener('click', function () {
+            console.log(key);
+        
+            el.classList.toggle("active");
             
-            el.addEventListener('click', function () {
-                console.log(key);
-            
-                el.classList.toggle("active");
-                
-                navitem.forEach(function(ell, els){
-                    if(key !== els) {
-                        ell.classList.remove('active');
-                    }
-                    console.log(els);
-                });
+            navitem.forEach(function(ell, els){
+                if(key !== els) {
+                    ell.classList.remove('active');
+                }
+                console.log(els);
             });
         });
-        }
     });
-
-// Theme switcher
-$(document).ready(function(){
-    $(".theme-switcher").click(function(){
-    $(this).text(function(i, v){
-      return v === 'light' ? 'dark' : 'light'
-    });
-    });
+    }
 });
 
-(function() {
-  $('.theme-switcher').click(function() {
-    $('#theme').toggleClass('dark');
-  });
-})();
+(function($){
+	'use strict';
+
+    //menu side bar
+    $('.menu-bar').on('click', function(){
+        $('body,header,.menu-bar,.menu-items,.overlay').addClass('active');
+    });
+
+    $('.crose-bar').on('click', function(){
+        $('body,header,.menu-bar,.menu-items,.overlay').removeClass('active');
+    });
+
+    $('.overlay').on('click', function(){
+        $('body,header,.menu-bar,.menu-items,.overlay').removeClass('active');
+    })
+
+    // menu icon-related
+    $(".list-item>li>.m-submenu").parent("li").children("a").addClass("icon-down");
+
+    //mobile drodown menu display
+	$('.menu-list ul.list-item li a').on('click', function(e) {
+        var element = $(this).parent('li');
+        if (element.hasClass('open')) {
+            element.removeClass('open');
+            element.find('li').removeClass('open');
+            element.find('ul').slideUp(500,"swing");
+        }
+        else {
+            element.addClass('open');
+            element.children('ul').slideDown(500,"swing");
+            element.siblings('li').children('ul').slideUp(500,"swing");
+            element.siblings('li').removeClass('open');
+            element.siblings('li').find('li').removeClass('open');
+            element.siblings('li').find('ul').slideUp(500,"swing");
+        }
+	}); 
+
+
+    // drop down menu width overflow problem fix
+    $('ul').parent().on('hover', function() {
+        var menu = $(this).find("ul");
+        var menupos = $(menu).offset();
+        if (menupos.left + menu.width() > $(window).width()) {
+            var newpos = -$(menu).width();
+            menu.css({ left: newpos });    
+        }
+    });
+    // Theme switcher
+    $(document).ready(function(){
+        $(".theme-switcher").click(function(){
+        $(this).text(function(i, v){
+        return v === 'light' ? 'dark' : 'light'
+        });
+        });
+    });
+
+    (function() {
+    $('.theme-switcher').click(function() {
+        $('#theme').toggleClass('dark');
+    });
+    })();
+
+     // Scroll To Top 
+    var scrollTop = $(".scrollToTop");
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() < 500) {
+        scrollTop.removeClass("active");
+        } else {
+        scrollTop.addClass("active");
+        }
+    });
+    
+    //Click event to scroll to top
+    $('.scrollToTop').on('click', function () {
+        $('html, body').animate({
+        scrollTop: 0
+        }, 500);
+        return false;
+    });
+
+})(jQuery);

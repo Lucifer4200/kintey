@@ -233,6 +233,9 @@ button.btn {
         border-radius: 10px;
         transform: translateY(-50%);
         background: #dcdee3;
+        @include breakpoint (mobile) {
+            display: none;
+        }
     }
     h3 {
         margin: 0;
@@ -760,7 +763,10 @@ form {
 
 //? all social media ends 
 
-
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 @keyframes preloader-fx {
     0% {
