@@ -73,6 +73,18 @@
                 }
             }
         }
+        .content-button {
+            button.btn-outline {
+                width: 170px;
+                background: $theme-color;
+                @include breakpoint (lg) {
+                    width: 170px;
+                }
+               &:hover {
+                   background: transparent;
+               }
+            }
+        }
     }
     &.style-one {
         padding: 20px 0;
