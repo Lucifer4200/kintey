@@ -59,17 +59,17 @@
             .search-icon {
                 position: absolute;
                 top: 50%;
-                right: 0;
-                width: 50px;
+                right: -1px;
+                width: 100px;
+                color: $white-color;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                border-radius: 0 25px 25px 0;
+                background: $theme-color;
                 transform: translateY(-51%);
                 i {
-                    color: $white-color;
-                    height: 45px;
-                    line-height: 45px;
-                    width: 100%;
-                    text-align: center;
-                    border-radius: 0 25px 25px 0;
-                    background: $theme-color;
+                    margin-right: 6px;
                 }
             }
         }
