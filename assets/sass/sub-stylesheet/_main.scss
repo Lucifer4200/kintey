@@ -252,8 +252,61 @@
 
 //*====== popular category css start ====*//
 .popular-category{
+    position: relative;
     background: #f8f8f8;
+    &::before {
+        @extend %absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background-size: cover;
+        background-position: center top;
+        background-image: url(../../assets/images/page-header/01.jpg);
+    }
+    &::after {
+        @extend %absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        opacity: .3;
+        background: #000;
+        
+    }
+    .section-header {
+        z-index: 1;
+        position: relative;
+        h3 {
+            color: $white-color;
+            background: transparent;
+        }
+        &::after {
+            background: $white-color;
+            @include breakpoint (sm) {
+                width: 55%;
+            }
+            @include breakpoint (md) {
+                width: 65%;
+            }
+            @include breakpoint (lg) {
+                width: 75%;
+            }
+            @include breakpoint (xl) {
+                width: 78%;
+            }
+        }
+        a {
+            color: $white-color;
+            i {
+                color: $white-color;
+            }
+        }
+    }
     .section-wrapper {
+        overflow: visible;
+        z-index: 9;
+        position: relative;
         .element-categories-table {
             ul.categories-item {
                 padding: 0;
@@ -383,6 +436,7 @@
             margin-top: 35px;
             background: $white-color;
             span {
+                font-weight: 600;
                 color: $theme-color;
             }
         }
@@ -498,11 +552,6 @@
                         }
                     &:hover {
                         span {
-                            color: $theme-color;
-                        }
-                    }
-                    &:last-child {
-                        a {
                             color: $theme-color;
                         }
                     }

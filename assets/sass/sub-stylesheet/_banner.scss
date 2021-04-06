@@ -1,6 +1,6 @@
 //*==== pageheader css start ====*//
 .page-header {
-    padding: 40px 0;
+    padding: 60px 0;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -16,8 +16,16 @@
         background: linear-gradient(45deg, $theme-color, $primary-color) 
     }
     .banner-content {
-        position: relative;
         z-index: 9;
+        position: relative;
+        .search-title {
+            padding-bottom: 16px;
+            text-align: center;
+            span {
+                font-size: 22px;
+                color: $white-color
+            }
+        }
         .content-search {
             @extend %flex;
             position: relative;
@@ -68,6 +76,9 @@
                 border-radius: 0 25px 25px 0;
                 background: $theme-color;
                 transform: translateY(-51%);
+                @include breakpoint (lg) {
+                    width: 120px;
+                }
                 i {
                     margin-right: 6px;
                 }
@@ -75,13 +86,18 @@
         }
         .content-button {
             button.btn-outline {
-                width: 170px;
-                background: $theme-color;
-                @include breakpoint (lg) {
-                    width: 170px;
+                width: 200px;
+                background: #c0c0c0;
+                span {
+                    color: #4F4F4F;
+                    font-size: 14px;
+                    font-weight: 600;
                 }
                &:hover {
                    background: transparent;
+                   span {
+                       color: #fff;
+                   }
                }
             }
         }
