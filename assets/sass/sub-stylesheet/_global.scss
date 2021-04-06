@@ -270,7 +270,7 @@ button.btn {
     .more-btn {
         color: #222;
         font-size: 14px;
-        transition: all 0.3s ease-in-out;
+        transition: all .3s ease-in-out;
         &:hover {
             color: $theme-color;
             i {
@@ -280,6 +280,7 @@ button.btn {
         i {
             font-size: 14px;
             color: #222;
+            transition: all .3s ease-in-out;
         }
 
     }
