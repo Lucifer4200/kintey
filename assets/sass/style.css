@@ -922,8 +922,8 @@ header .header-bottom {
     right: 0;
     bottom: 0;
     width: 100%;
-    opacity: .8;
-    background: linear-gradient(45deg, #0dcaf0d9, #0d6efdd6); }
+    opacity: .91;
+    background: linear-gradient(to left, #7347c1, #0674ec); }
   .page-header .banner-content {
     z-index: 9;
     position: relative; }
@@ -1202,6 +1202,7 @@ header .header-bottom {
             margin-top: 20px; }
 
 .join-marketplace {
+  padding: 60px 0;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -1212,8 +1213,8 @@ header .header-bottom {
     left: 0;
     bottom: 0;
     width: 100%;
-    opacity: .8;
-    background: linear-gradient(45deg, #0dcaf0d9, #0d6efdd6); }
+    opacity: .91;
+    background: linear-gradient(to left, #7347c1, #0674ec); }
   .join-marketplace .join-content {
     z-index: 9;
     text-align: center;
