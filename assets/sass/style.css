@@ -923,7 +923,7 @@ header .header-bottom {
     bottom: 0;
     width: 100%;
     opacity: .8;
-    background: linear-gradient(45deg, #f38944, #7347c1); }
+    background: linear-gradient(45deg, #0dcaf0d9, #0d6efdd6); }
   .page-header .banner-content {
     z-index: 9;
     position: relative; }
@@ -1213,7 +1213,7 @@ header .header-bottom {
     bottom: 0;
     width: 100%;
     opacity: .8;
-    background: linear-gradient(to right, #f38944, #7347c1); }
+    background: linear-gradient(45deg, #0dcaf0d9, #0d6efdd6); }
   .join-marketplace .join-content {
     z-index: 9;
     text-align: center;
