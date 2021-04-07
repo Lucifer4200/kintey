@@ -985,9 +985,9 @@ header .header-bottom {
           margin-right: 6px; }
     .page-header .banner-content .content-button button.btn-outline {
       width: 200px;
-      background: #c0c0c0; }
+      background: #eef1f3; }
       .page-header .banner-content .content-button button.btn-outline span {
-        color: #4F4F4F;
+        color: #f38944;
         font-size: 14px;
         font-weight: 600; }
       .page-header .banner-content .content-button button.btn-outline:hover {

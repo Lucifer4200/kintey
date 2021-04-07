@@ -87,9 +87,9 @@
         .content-button {
             button.btn-outline {
                 width: 200px;
-                background: #c0c0c0;
+                background: #eef1f3;
                 span {
-                    color: #4F4F4F;
+                    color: $theme-color;
                     font-size: 14px;
                     font-weight: 600;
                 }
