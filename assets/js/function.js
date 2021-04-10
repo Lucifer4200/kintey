@@ -18,10 +18,10 @@ var swiper = new Swiper('.weekly-slider', {
     },
     breakpoints: {
         1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         },
         576: {
             slidesPerView: 2,
@@ -45,10 +45,10 @@ var swiper = new Swiper('.buyer-slider', {
     },
     breakpoints: {
         1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         },
         576: {
             slidesPerView: 2,
@@ -73,10 +73,10 @@ var swiper = new Swiper('.trending-slider', {
     },
     breakpoints: {
         1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         },
         576: {
             slidesPerView: 2,
@@ -269,5 +269,11 @@ var navitem = document.querySelectorAll('.nav-item');
         }, 500);
         return false;
     });
+
+    // active tooltip
+    // var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    //     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    //     return new bootstrap.Tooltip(tooltipTriggerEl)
+    // })
 
 })(jQuery);

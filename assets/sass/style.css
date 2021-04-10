@@ -209,10 +209,10 @@ button.btn {
     right: 0;
     left: auto;
     width: 100%;
-    height: 1px;
+    height: .5px;
     border-radius: 10px;
     transform: translateY(-50%);
-    background: rgba(151, 151, 151, 0.3); }
+    background: #ccc; }
     @media (max-width: 425px) {
       .section-header::after {
         display: none; } }
@@ -224,7 +224,7 @@ button.btn {
     font-weight: 600;
     position: relative;
     white-space: nowrap;
-    max-width: 80%;
+    max-width: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -234,7 +234,8 @@ button.btn {
         padding-right: 15px; } }
     @media (min-width: 576px) {
       .section-header h3 {
-        font-size: 22px; } }
+        font-size: 22px;
+        max-width: 80%; } }
   .section-header span {
     z-index: 9;
     display: none;
@@ -257,7 +258,7 @@ button.btn {
       color: #222;
       transition: all .3s ease-in-out; }
   .section-header.style-one::after {
-    height: 2px;
+    height: 1px;
     top: auto;
     bottom: 5px;
     transform: translateY(100%); }
@@ -316,7 +317,7 @@ button.btn {
   padding: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 2px #eee;
+  border: 1px solid #d4ded9;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -525,7 +526,7 @@ form button.custom-btn {
   border-radius: 5px; }
 
 /*======= all scrollbar css =====*/
-.section-header, .post-item .post-text.style-one, header .header-top .top-item, header .header-top .top-item .top-menu ul.list-menu, header .header-bottom .bottom-item ul.menu-list, .page-header .banner-content .content-search, .request-qa .section-wrapper .req-form, .weekly-deals .section-header .discont-end ul, .buyer-zone .section-header .discont-end ul, .popular-category .section-wrapper .element-categories-table ul.categories-item, .supplier-regions .section-wrapper .supplier-list ul.list-item, footer .subscribe ul.socil-media, .product-link .section-wrapper .content-menu ul.menu-list, .product-link .section-wrapper .content-menu ul.menu-list li, .product-link .section-wrapper .content-menu ul.menu-list li a, .product-link .section-wrapper .product-all-sublink .submenu-inner {
+.section-header, .post-item .post-text.style-one, header .header-top .top-item, header .header-top .top-item .top-menu ul.list-menu, header .header-bottom .bottom-item, header .header-bottom .bottom-item ul.menu-list, .page-header .banner-content .content-search, .request-qa .section-wrapper .req-form, .weekly-deals .section-header .discont-end ul, .buyer-zone .section-header .discont-end ul, .popular-category .section-wrapper .element-categories-table ul.categories-item, .supplier-regions .section-wrapper .supplier-list ul.list-item, footer .subscribe ul.socil-media, .product-link .section-wrapper .content-menu ul.menu-list, .product-link .section-wrapper .content-menu ul.menu-list li, .product-link .section-wrapper .content-menu ul.menu-list li a, .product-link .section-wrapper .product-all-sublink .submenu-inner {
   display: flex;
   flex-wrap: wrap; }
 
@@ -654,7 +655,7 @@ header .header-top {
       transform: translateY(35px);
       opacity: 0;
       visibility: hidden;
-      transition: all ease 0.3s;
+      transition: all ease 0.4s;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); }
       header .header-top .top-item .header-point .sub-menu ul.drop-list {
         margin: 0;
@@ -685,37 +686,45 @@ header .header-top {
           padding: 2px 10px 4px;
           border-radius: 4px;
           position: relative;
-          background: #f38944;
+          border: 1px solid #f38944;
           transition: all 0.3s ease-in-out; }
           header .header-top .top-item .top-menu ul.list-menu li a span {
-            color: #fff;
+            color: #f38944;
             z-index: 1;
             position: relative;
             transition: all .3s ease-in-out; }
           header .header-top .top-item .top-menu ul.list-menu li a:hover {
-            background: #eeb35c; }
+            background: #f38944; }
+            header .header-top .top-item .top-menu ul.list-menu li a:hover span {
+              color: #fff; }
 header .header-bottom {
   position: relative;
   padding: 15px 0; }
-  header .header-bottom .bottom-item ul.menu-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    justify-content: flex-start;
-    align-items: center; }
-    @media (max-width: 1199px) {
-      header .header-bottom .bottom-item ul.menu-list li:last-child .sub-menu {
-        right: 0; } }
-    header .header-bottom .bottom-item ul.menu-list li a {
-      color: #000;
-      font-size: 14px;
-      padding: 5px 10px; }
-      header .header-bottom .bottom-item ul.menu-list li a:hover {
-        color: #f38944; }
-    header .header-bottom .bottom-item ul.menu-list li:hover .sub-menu {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible; }
+  header .header-bottom .bottom-item {
+    align-items: baseline;
+    justify-content: space-between; }
+    header .header-bottom .bottom-item ul.menu-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      justify-content: flex-start;
+      align-items: center; }
+      @media (max-width: 1199px) {
+        header .header-bottom .bottom-item ul.menu-list li:last-child .sub-menu {
+          right: 0; } }
+      header .header-bottom .bottom-item ul.menu-list li a {
+        color: #000;
+        font-size: 14px;
+        padding: 5px 10px; }
+        @media (min-width: 1200px) {
+          header .header-bottom .bottom-item ul.menu-list li a {
+            font-size: 15px; } }
+        header .header-bottom .bottom-item ul.menu-list li a:hover {
+          color: #f38944; }
+      header .header-bottom .bottom-item ul.menu-list li:hover .sub-menu {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible; }
 
 .sub-menu {
   display: none; }
@@ -728,7 +737,7 @@ header .header-bottom {
       transform: translateY(35px);
       opacity: 0;
       visibility: hidden;
-      transition: all ease 0.3s;
+      transition: all ease 0.5s;
       z-index: 111;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); } }
   .sub-menu ul.drop-list {
@@ -762,6 +771,23 @@ header .header-bottom {
           border-radius: 3px;
           color: #fff !important;
           background: #f38944; }
+
+ul.icon-menu li a {
+  position: relative;
+  text-decoration: none; }
+  ul.icon-menu li a::after {
+    position: absolute;
+    content: "2";
+    top: -5px;
+    right: -5px;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 100%;
+    color: #fff;
+    background: #f38944; }
 
 .sp-header {
   padding: 10px 0; }
@@ -923,7 +949,7 @@ header .header-bottom {
     bottom: 0;
     width: 100%;
     opacity: .91;
-    background: linear-gradient(to left, #7347c1, #0674ec); }
+    background: linear-gradient(to left, #00c0f4, #0674ec); }
   .page-header .banner-content {
     z-index: 9;
     position: relative; }
@@ -985,13 +1011,13 @@ header .header-bottom {
           margin-right: 6px; }
     .page-header .banner-content .content-button button.btn-outline {
       width: 200px;
-      background: #eef1f3; }
+      background: transparent; }
       .page-header .banner-content .content-button button.btn-outline span {
-        color: #f38944;
+        color: #fff;
         font-size: 14px;
         font-weight: 600; }
       .page-header .banner-content .content-button button.btn-outline:hover {
-        background: transparent; }
+        background: #f38944; }
         .page-header .banner-content .content-button button.btn-outline:hover span {
           color: #fff; }
   .page-header.style-one {
@@ -1064,6 +1090,10 @@ header .header-bottom {
         margin: 0; }
       .request-qa .section-wrapper .req-form .form-content form .input-group {
         width: 100%; }
+        .request-qa .section-wrapper .req-form .form-content form .input-group input.form-control {
+          background: #fff; }
+        .request-qa .section-wrapper .req-form .form-content form .input-group textarea {
+          background: #fff; }
       .request-qa .section-wrapper .req-form .form-content form .input-btn button {
         width: 100%;
         border-radius: 5px; }
@@ -1133,8 +1163,8 @@ header .header-bottom {
     left: 0;
     width: 100%;
     height: 60%;
-    opacity: .3;
-    background: #000; }
+    opacity: .8;
+    background: #00c0f4; }
   .popular-category .section-header {
     z-index: 1;
     position: relative; }

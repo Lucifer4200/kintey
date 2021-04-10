@@ -13,7 +13,7 @@
         bottom: 0;
         width: 100%;
         opacity: .91;
-        background: linear-gradient(to left,#7347c1,#0674ec); 
+        background: linear-gradient(to left,#00c0f4,#0674ec); 
     }
     .banner-content {
         z-index: 9;
@@ -87,14 +87,14 @@
         .content-button {
             button.btn-outline {
                 width: 200px;
-                background: #eef1f3;
+                background: transparent;
                 span {
-                    color: $theme-color;
+                    color: $white-color;
                     font-size: 14px;
                     font-weight: 600;
                 }
                &:hover {
-                   background: transparent;
+                   background: $theme-color;
                    span {
                        color: #fff;
                    }

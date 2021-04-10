@@ -38,7 +38,7 @@ header {
                     transform: translateY(35px);
                     opacity: 0;
                     visibility: hidden;
-                    transition: all ease 0.3s;
+                    transition: all ease 0.4s;
                     box-shadow: 0 0 10px rgba(0, 0, 0, .18);
                     ul.drop-list {
                         margin: 0;
@@ -78,16 +78,19 @@ header {
                             padding: 2px 10px 4px;
                             border-radius: 4px;
                             position: relative;
-                            background:  $theme-color;
+                            border: 1px solid $theme-color;
                             transition: all 0.3s ease-in-out;
                             span {
-                                color: $white-color;
+                                color: $theme-color;
                                 z-index: 1;
                                 position: relative;
                                 transition: all .3s ease-in-out;
                             }
                             &:hover {
-                                background: $hover-color;
+                                background: $theme-color;
+                                span {
+                                    color: $white-color;
+                                }
                             }
                         }
                     }
@@ -99,6 +102,9 @@ header {
         position: relative;
         padding: 15px 0;
         .bottom-item {
+            @extend %flex;
+            align-items: baseline;
+            justify-content: space-between;
             ul.menu-list {
                 padding: 0;
                 margin: 0;
@@ -118,6 +124,9 @@ header {
                         color: #000;
                         font-size: 14px;
                         padding: 5px 10px;
+                        @include breakpoint (xl) {
+                            font-size: 15px;
+                        }
                         &:hover {
                             color: $theme-color;
                         }
@@ -144,7 +153,7 @@ header {
         transform: translateY(35px);
         opacity: 0;
         visibility: hidden;
-        transition: all ease 0.3s;
+        transition: all ease 0.5s;
         z-index: 111;
         box-shadow: 0 0 10px rgba(0, 0, 0, .18);
     }
@@ -185,6 +194,28 @@ header {
                     color: $white-color!important;
                     background: $theme-color;
                 }
+            }
+        }
+    }
+}
+ul.icon-menu {
+    li {
+        a {
+            position: relative;
+            text-decoration: none;
+            &::after {
+                position: absolute;
+                content: "2";
+                top: -5px;
+                right: -5px;
+                height: 15px;
+                width: 15px;
+                line-height: 15px;
+                text-align: center;
+                font-size: 10px;
+                border-radius: 100%;
+                color: $white-color;
+                background: $theme-color;
             }
         }
     }
